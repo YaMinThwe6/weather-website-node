@@ -3,8 +3,6 @@ var search = document.querySelector('input');
 var Message = document.querySelector('#message');
 var mybut = document.querySelector("#myBtn");
 
-// Message.textContent = '';
-
 input.addEventListener("submit", (e)=> {
     e.preventDefault(); 
     if (e.keyCode === 13 || e.which === 13) {
