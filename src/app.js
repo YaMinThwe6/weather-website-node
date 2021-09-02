@@ -20,21 +20,6 @@ app.get('', (req,res)=>{
     })
 })
 
-app.get('/about',(req,res)=>{
-    res.render('about', {
-        title:'About me',
-        name:'Ya Min Thwe'
-    })
-})
-
-app.get('/help', (req,res)=>{
-    res.render('help', {
-        title:'Help',
-        name:'Ya Min Thwe',
-        example:'This is an example help message.' 
-    })
-})
-
 app.get('/weather', (req,res)=>{
     if(!req.query.address) {
         return res.send({
@@ -52,14 +37,6 @@ app.get('/weather', (req,res)=>{
             }
             res.send({info})
         })
-    })
-})
-
-app.get('/help/*', (req,res)=>{
-    res.render('404pages', {
-        title:'404 page',
-        name:'Ya Min Thwe',
-        message:'Help article not found!'
     })
 })
 
